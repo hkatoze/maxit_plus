@@ -10,8 +10,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:maxit_plus/constants.dart';
 import 'package:camera/camera.dart';
 import 'package:maxit_plus/services/api_service.dart';
-import 'package:maxit_plus/views/components/custumTextField.dart';
-import 'package:maxit_plus/views/components/defaultBtn.dart';
+import 'package:maxit_plus/views/globalComponents/custumTextField.dart';
+import 'package:maxit_plus/views/globalComponents/defaultBtn.dart';
 
 class Pinresetpage extends StatefulWidget {
   const Pinresetpage({super.key});
@@ -175,7 +175,7 @@ class _PinresetpageState extends State<Pinresetpage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 100.sp),
-                if (currentPage < 2)
+                if (currentPage ==1 )
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

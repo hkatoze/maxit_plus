@@ -2,14 +2,14 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:image_picker/image_picker.dart';
 
 class APIService {
   APIService._();
   static final APIService instance = APIService._();
   factory APIService() => instance;
 
-  static const String baseUrl = 'https://5a59-138-199-7-238.ngrok-free.app/api';
+  static const String baseUrl =
+      'https://becc-197-239-64-129.ngrok-free.app/api';
   Future<String> sendOtp(String phoneNumber) async {
     try {
       final response = await http.post(

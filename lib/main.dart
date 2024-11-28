@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:maxit_plus/views/mainpage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaxitPlusApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MaxitPlusApp extends StatelessWidget {
+  const MaxitPlusApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
         useMaterial3: true,
       ),
-      home: const Mainview(),
+      home: const MainPage(),
     );
   }
 }

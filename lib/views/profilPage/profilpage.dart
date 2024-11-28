@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:maxit_plus/constants.dart';
-import 'package:maxit_plus/views/homepage.dart';
+import 'package:maxit_plus/views/homepage/homepage.dart';
 import 'package:maxit_plus/views/mainpage.dart';
-import 'package:maxit_plus/views/pinResetPage.dart';
+import 'package:maxit_plus/views/pinResetPage/pinResetPage.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Profilpage extends StatefulWidget {

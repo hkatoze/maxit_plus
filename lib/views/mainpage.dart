@@ -1,21 +1,21 @@
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:circular_bottom_navigation/tab_item.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:maxit_plus/constants.dart';
-import 'package:maxit_plus/views/homepage.dart';
-import 'package:maxit_plus/views/profilpage.dart';
 
-class Mainview extends StatefulWidget {
-  const Mainview({
+import 'package:maxit_plus/constants.dart';
+import 'package:maxit_plus/views/homepage/homepage.dart';
+import 'package:maxit_plus/views/profilPage/profilpage.dart';
+
+class MainPage extends StatefulWidget {
+  const MainPage({
     super.key,
   });
 
   @override
-  State<Mainview> createState() => _MainviewState();
+  State<MainPage> createState() => _MainPageState();
 }
 
-class _MainviewState extends State<Mainview> {
+class _MainPageState extends State<MainPage> {
   int selectedPos = 0;
 
   late CircularBottomNavigationController _navigationController;
@@ -39,15 +39,20 @@ class _MainviewState extends State<Mainview> {
         labelStyle: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 13, color: ktertiaryColor)),
   ]);
+
   @override
   void initState() {
     super.initState();
     _navigationController = CircularBottomNavigationController(selectedPos);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() {});
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
           Padding(
@@ -61,40 +66,30 @@ class _MainviewState extends State<Mainview> {
   }
 
   Widget bodyContainer() {
-    Widget page;
     switch (selectedPos) {
       case 0:
-        page = const Homepage();
-        break;
+        return const Homepage();
+
       case 1:
-        page = Container();
-        break;
+        return Container();
+
       case 2:
-        page = Container();
-        break;
+        return Container();
 
       case 3:
-        page = Container();
-        break;
+        return Container();
+
       case 4:
-        page = Container();
-        break;
+        return Container();
 
       case 5:
-        page = const Profilpage(
+        return const Profilpage(
           isPage: true,
         );
-        break;
 
       default:
-        page = Container();
-        break;
+        return Homepage();
     }
-
-    return GestureDetector(
-      child: page,
-      onTap: () {},
-    );
   }
 
   Widget bottomNav() {
