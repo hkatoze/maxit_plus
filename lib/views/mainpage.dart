@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:maxit_plus/constants.dart';
 import 'package:maxit_plus/views/homepage.dart';
+import 'package:maxit_plus/views/profilpage.dart';
 
 class Mainview extends StatefulWidget {
   const Mainview({
@@ -32,6 +33,9 @@ class _MainviewState extends State<Mainview> {
         labelStyle: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 13, color: ktertiaryColor)),
     TabItem(Icons.qr_code, "Code QR", kprimaryColor,
+        labelStyle: TextStyle(
+            fontWeight: FontWeight.bold, fontSize: 13, color: ktertiaryColor)),
+    TabItem(Icons.person, "Profil", kprimaryColor,
         labelStyle: TextStyle(
             fontWeight: FontWeight.bold, fontSize: 13, color: ktertiaryColor)),
   ]);
@@ -74,6 +78,12 @@ class _MainviewState extends State<Mainview> {
         break;
       case 4:
         page = Container();
+        break;
+
+      case 5:
+        page = const Profilpage(
+          isPage: true,
+        );
         break;
 
       default:
